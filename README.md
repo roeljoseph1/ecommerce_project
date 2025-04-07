@@ -27,6 +27,44 @@ The data comes from a local e-commerce platform and includes:
 - **Git & GitHub**: Version control and project publishing
 ---
 
+# 🧼 Excel Data Cleaning & Preparation
+Before performing SQL analysis, I conducted extensive data cleaning and formatting in Excel across all three datasets from Wish.com. This step ensured a clean, structured foundation for analysis.
+
+# 🗂 Files Cleaned:
+- **01_products_summer2020_clean**
+
+- **02_seller_success_metrics_clean**
+
+- **03_category_keywords_count_clean**
+
+# ✅ Excel Cleaning Tasks Performed 
+
+| Step            | Actions Taken                                                                                   |
+|-----------------|--------------------------------------------------------------------------------------------------|
+| **Column Audit**   | Renamed column headers for consistency (added underscores); dropped unused datasets            |
+| **Formatting**     | Converted each sheet into structured Excel Tables for easier filtering and referencing        |
+| **Cleaning**       | Removed duplicates, trimmed unnecessary columns, and standardized text values (e.g., `LOWER()` on keywords) |
+| **Color Grouping** | Normalized alternate names for similar product colors (e.g., `"grey"`, `"Gray"`, `"GRAY"` → `gray`) |
+| **Null Handling**  | Added placeholder null values where appropriate to preserve table structure                    |
+
+
+# 📊 Highlights from Pivot Analysis:
+- Top 3 selling product colors: black, white, and gray
+
+- Lowest-selling colors: darkgreen, rainbow, and camel
+
+- Shipping trends: standard shipping appeared most often, suggesting express options may be less popular
+
+*Filtered Views Used:*
+
+- Top 10 highest-grossing merchants
+
+- Highest-rated merchants based on average rating
+
+- These early Excel-based explorations helped shape the business questions I pursued in SQL, and allowed me to validate trends before committing to deeper analysis.
+
+---
+
 # 🔍 Key Insights
 
 ### 🟥 1. Top Product Colors by Revenue
@@ -173,7 +211,9 @@ ORDER BY
 | trendy_world                       | 88               | 400000       | Aggressive Discounting  |
 | bigcompany                         | 85               | 400000       | Aggressive Discounting  |
 
+
 *Table for Discount Streategy vs Performance, only displaying 15*
+
 
 ---
 
