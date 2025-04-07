@@ -41,7 +41,7 @@ WITH HighestSellingColors AS (
     SELECT
         LOWER(TRIM(product_color)) AS new_color,
         SUM(units_sold) AS total_units_sold,
-        AVG(rating) AS avg_rating
+        ROUND(AVG(rating), 2) AS avg_rating
     FROM 
         products
     WHERE
@@ -61,7 +61,6 @@ RankedColors AS (
 SELECT *
 FROM RankedColors
 ORDER BY rank_rating;
-
 /*
 Business Insight:
 Ranked product colors based on both total units sold and average customer rating to explore whether top-selling 
@@ -119,11 +118,11 @@ attention from a product or customer sentiment perspective.
 
 -- Which sellers are overperforming or underperforming based on their average discount strategy and how do their sales and ratings compare?
 
-
+-- Assume average_discount column was given a negative value by mistake. 
 SELECT
     p.merchant_title,
     p.merchant_id,
-    sm.average_discount,
+    ABS(sm.average_discount),
     SUM((p.price_usd - p.shipping_option_price) * p.units_sold) AS total_profit,
     CASE
         WHEN sm.average_discount >= 30 THEN 'Aggressive Discounting'
@@ -140,7 +139,8 @@ GROUP BY
     p.merchant_id,
     sm.average_discount
 ORDER BY
-    total_profit DESC;
+    total_profit DESC
+LIMIT 15;
 
 /*
 Business Insight:
