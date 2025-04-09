@@ -94,7 +94,7 @@ LIMIT 10
 ```sql
 WITH HighestSellingColors AS (
     SELECT
-        LOWER(TRIM(product_color)) AS new_color,
+        LOWER(TRIM(product_color)),
         SUM(units_sold) AS total_units_sold,
         AVG(rating) AS avg_rating
     FROM 
