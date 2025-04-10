@@ -39,7 +39,7 @@ design decisions. Next, I explored further to see if the higher sold colors corr
 
 WITH HighestSellingColors AS (
     SELECT
-        LOWER(TRIM(product_color)) AS new_color,
+        LOWER(TRIM(product_color)),
         SUM(units_sold) AS total_units_sold,
         ROUND(AVG(rating), 2) AS avg_rating
     FROM 
