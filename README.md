@@ -12,7 +12,7 @@ This project analyzes a real-world dataset from Wish.com, a global e-commerce pl
 
 # 📂 Data Overview
 
-The data comes from a local e-commerce platform and includes:
+The data comes from Kaggle.com and includes:
 - Product information (color, price, units sold, ratings)
 - Seller metrics (average discount, customer rating)
 - Keyword insights (not deeply explored in this version)
@@ -20,9 +20,10 @@ The data comes from a local e-commerce platform and includes:
 ---
 
 # 🧰 Tools Used
-- **SQL**: Core tool for querying and analyzing structured data
-- **Excel**: Core tool for standardizing, cleaning, and analyzing unstructured data
+- **SQL**: Utilized for querying and analyzing structured data
+- **Excel**: Used for standardizing, cleaning, and analyzing unstructured data
 - **PostgreSQL**: SQL "flavor" used for this project
+- **PowerBI**: A business intelligence tool used for building dashboards, visualizing trends, and communicating insights with interactive charts and filters
 - **Visual Studio Code**: Writing and testing SQL queries
 - **Git & GitHub**: Version control and project publishing
 ---
