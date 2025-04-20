@@ -12,7 +12,7 @@ This project analyzes a real-world dataset from Wish.com, a global e-commerce pl
 
 # 📂 Data Overview
 
-The data comes from Kaggle.com and includes:
+The data comes from a local e-commerce platform and includes:
 - Product information (color, price, units sold, ratings)
 - Seller metrics (average discount, customer rating)
 - Keyword insights (not deeply explored in this version)
@@ -20,8 +20,8 @@ The data comes from Kaggle.com and includes:
 ---
 
 # 🧰 Tools Used
-- **SQL**: Utilized for querying and analyzing structured data
-- **Excel**: Used for standardizing, cleaning, and analyzing unstructured data
+- **SQL**: Core tool for querying and analyzing structured data
+- **Excel**: Core tool for standardizing, cleaning, and analyzing unstructured data
 - **PostgreSQL**: SQL "flavor" used for this project
 - **PowerBI**: A business intelligence tool used for building dashboards, visualizing trends, and communicating insights with interactive charts and filters
 - **Visual Studio Code**: Writing and testing SQL queries
@@ -49,7 +49,7 @@ Before performing SQL analysis, I conducted extensive data cleaning and formatti
 | **Null Handling**  | Added placeholder null values where appropriate to preserve table structure                    |
 
 
-# 📊 Highlights from Pivot Analysis:
+# 📊 Highlights from Pivot Table Analysis:
 - Top 3 selling product colors: black, white, and gray
 
 - Lowest-selling colors: darkgreen, rainbow, and camel
@@ -95,7 +95,7 @@ LIMIT 10
 ```sql
 WITH HighestSellingColors AS (
     SELECT
-        LOWER(TRIM(product_color)) AS new_color,
+        LOWER(TRIM(product_color)),
         SUM(units_sold) AS total_units_sold,
         AVG(rating) AS avg_rating
     FROM 
