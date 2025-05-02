@@ -22,7 +22,7 @@ This dataset comes from Kaggle.com and includes:
 # 🧰 Tools Used
 - **SQL**: Core tool for querying and analyzing structured data
 - **Excel**: Core tool for standardizing, cleaning, and analyzing unstructured data
-- **PostgreSQL**: relational database management system
+- **PostgreSQL**: Relational database management system
 - **PowerBI**: A business intelligence tool used for building dashboards, visualizing trends, and communicating insights with interactive charts and filters
 - **Visual Studio Code**: Writing and testing SQL queries
 - **Git & GitHub**: Version control and project publishing
