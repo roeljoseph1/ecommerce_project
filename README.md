@@ -213,7 +213,7 @@ ORDER BY
 | bigcompany                         | 85               | 400000       | Aggressive Discounting  |
 
 
-*Table for Discount Streategy vs Performance, only displaying 15*
+*Table for Discount Strategy vs Performance, only displaying 15*
 
 
 ---
